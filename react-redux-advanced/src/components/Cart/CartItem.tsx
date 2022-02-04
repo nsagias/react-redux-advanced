@@ -1,7 +1,7 @@
-import { IItem } from './cart.models';
+import { IItem, Item } from './cart.models';
 import classes from './CartItem.module.css';
 
-const CartItem: React.FC<{item: IItem}> = (props) => {
+const CartItem: React.FC<{item: Item}> = (props) => {
   const { title, quantity, total, price } = props.item;
 
   return (
