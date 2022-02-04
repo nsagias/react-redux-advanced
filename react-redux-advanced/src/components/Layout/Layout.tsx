@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import MainHeader from './MainHeader';
 
-const Layout = (props) => {
+const Layout: React.FC = (props) => {
   return (
     <Fragment>
       <MainHeader />
