@@ -1,7 +1,8 @@
 import Card from '../UI/Card';
+import { IProducts } from './products.models';
 import classes from './ProductItem.module.css';
 
-const ProductItem = (props) => {
+const ProductItem: React.FC<IProducts> = (props) => {
   const { title, price, description } = props;
 
   return (
