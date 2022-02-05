@@ -5,10 +5,10 @@ import { useSelector } from 'react-redux';
 import { RootState } from './components/store/index';
 
 function App() {
-  const toggle = useSelector((state: RootState) => state.uiSlice.cartIsVisible);
+  const showCart: boolean = useSelector((state: RootState) => state.uiSlice.cartIsVisible);
   return (
     <Layout>
-     {toggle && <Cart /> }
+     {showCart && <Cart />}
       <Products />
     </Layout>
   );
