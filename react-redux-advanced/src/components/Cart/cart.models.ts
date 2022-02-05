@@ -23,3 +23,7 @@ export class Item {
       this.price = price;
     }
 }
+
+export interface IToggleCartHandler { 
+  (): void;
+}
