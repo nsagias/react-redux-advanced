@@ -1,4 +1,4 @@
-import { createSlice, configureStore, PayloadAction} from "@reduxjs/toolkit";
+import { configureStore, PayloadAction} from "@reduxjs/toolkit";
 import uiSliceReducer from "./ui-slice";
 
 
