@@ -1,8 +1,9 @@
+import { FC } from 'react';
 import CartButton from '../Cart/CartButton';
 import classes from './MainHeader.module.css';
 
 
-const MainHeader: React.FC = (props) => {
+const MainHeader: FC = (props) => {
 
 
   return (

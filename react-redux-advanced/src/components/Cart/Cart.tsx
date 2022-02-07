@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import Card from '../UI/Card';
 import classes from './Cart.module.css';
 import CartItem from './CartItem';
 import { IItem } from './cart.models';
 
-const Cart: React.FC = (props) => {
+const Cart: FC = (props) => {
   return (
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>

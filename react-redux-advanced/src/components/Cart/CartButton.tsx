@@ -1,10 +1,11 @@
+import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch} from '../store/index';
 import { uiActions } from '../store/ui-slice';
 import { IToggleCartHandler } from './cart.models';
 import classes from './CartButton.module.css';
 
-const CartButton: React.FC = (props) => {
+const CartButton: FC = (props) => {
   const dispatch = useDispatch<AppDispatch>();
  
 
