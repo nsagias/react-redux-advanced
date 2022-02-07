@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"; 
 
 
+const CART_SLICE: string = "CART_SLICE";
+const NEW_ITEM_QUANTITY_DEFAULT: number = 1;
+
 const INITIAL_STATE_CART_ITEMS= {
   items: [{
     id: "id", 
@@ -31,7 +34,7 @@ interface INewItemAction {
 
 
 const cartSlice = createSlice({
-  name: 'cart',
+  name: CART_SLICE,
   initialState: INITIAL_STATE_CART_ITEMS, 
   reducers: {
     addItemtoCart(state: INewItem , action: INewItemAction): void {
@@ -41,7 +44,7 @@ const cartSlice = createSlice({
         state.items.push({ 
           id: newItem.id, 
           price: newItem.price, 
-          quantity: 1, 
+          quantity: NEW_ITEM_QUANTITY_DEFAULT, 
           totalPrice: newItem.price,
           name: newItem.title
         });
