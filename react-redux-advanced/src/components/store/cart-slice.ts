@@ -6,7 +6,21 @@ const cartSlice = createSlice({
     items: [],
     totalQuantity: 0
   }, reducers: {
-    addItemtoCart() {},
+    addItemtoCart(state, action) {
+      const newItem = action.payload;
+      const existingItems = state.items.find(item => item.id === newItem.id);
+      if (!existingItems) {
+        state.items.push({ 
+          itemId: newItem.id, 
+          price: newItem.price, 
+          quantity: 1, 
+          totalPrice: newItem.price,
+          name: newItem.title
+        });
+      } else {
+        
+      }
+    },
     removeItemFromCart() {},
 
   }
