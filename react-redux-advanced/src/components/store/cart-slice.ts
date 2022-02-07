@@ -17,8 +17,10 @@ const cartSlice = createSlice({
           totalPrice: newItem.price,
           name: newItem.title
         });
-      } else {
-        
+      }
+      if (existingItems) {
+        existingItems.quantity++;
+        existingItems.totalPrice = existingItems.totalPrice + newItem.price;
       }
     },
     removeItemFromCart() {},
